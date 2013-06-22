@@ -19,7 +19,19 @@
 
             <!--Panorama item one-->
             <phone:PanoramaItem Header="Lasted News">
-                <Grid/>
+                <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,12,0">
+                    <ListBox Name="feedListBox" Height="468" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="400" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="feedListBox_SelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel VerticalAlignment="Top">
+                                    <TextBlock TextDecorations="Underline" FontSize="24" Name="feedTitle" TextWrapping="Wrap" Margin="12,0,0,0" HorizontalAlignment="Left" Foreground="{StaticResource PhoneAccentBrush}" Text="{Binding Title.Text, Converter={StaticResource Blog}}" />
+                                    <TextBlock Name="feedSummary" TextWrapping="Wrap" Margin="12,0,0,0" Text="{Binding Summary.Text, Converter={StaticResource Blog}}" />
+                                    <TextBlock Name="feedPubDate" Foreground="{StaticResource PhoneSubtleBrush}" Margin="12,0,0,10" Text="{Binding PublishDate.DateTime}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
             </phone:PanoramaItem>
 
             <!--Panorama item two-->
