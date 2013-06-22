@@ -5,7 +5,7 @@
     <Language code="pl-PL" />
   </Languages>
   <App xmlns="" ProductID="{3d2e114e-b6a6-4ec3-ae1d-813714084f07}" Title="Dotnetblogs.PL" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Pawel Sawicz" Description="Klient RSS dla polskiego protalu o nowościach w polskiej blogosferze." Publisher="Dotnetblogs" PublisherID="{b852365d-8031-4d7e-9b04-e05684cc6960}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+    <IconPath IsRelative="true" IsResource="false">small_icon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
@@ -18,27 +18,25 @@
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="DotnetblogsToken" TaskName="_default">
-        <TemplateIconic>
+        <TemplateFlip>
           <SmallImageURI IsRelative="true" IsResource="false">small_icon.png</SmallImageURI>
           <Count>0</Count>
-          <IconImageURI IsRelative="true" IsResource="false">
-          </IconImageURI>
-          <Title>
-          </Title>
-          <Message>
-          </Message>
-          <BackgroundColor>
-          </BackgroundColor>
-          <HasLarge>false</HasLarge>
-          <LargeContent1>
-          </LargeContent1>
-          <LargeContent2>
-          </LargeContent2>
-          <LargeContent3>
-          </LargeContent3>
+          <BackgroundImageURI IsRelative="true" IsResource="false">medium_icon.png</BackgroundImageURI>
+          <Title>.NET Blogs PL</Title>
+          <BackContent>
+          </BackContent>
+          <BackBackgroundImageURI IsRelative="true" IsResource="false">
+          </BackBackgroundImageURI>
+          <BackTitle>
+          </BackTitle>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">large_icon.png</LargeBackgroundImageURI>
+          <LargeBackContent />
+          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false">
+          </LargeBackBackgroundImageURI>
           <DeviceLockImageURI IsRelative="true" IsResource="false">
           </DeviceLockImageURI>
-        </TemplateIconic>
+          <HasLarge>True</HasLarge>
+        </TemplateFlip>
       </PrimaryToken>
     </Tokens>
     <ScreenResolutions>
