@@ -13,8 +13,8 @@ namespace Dotnetblogs.Repositorium.Blogs
         public ListOfBlog()
         {
             Blogs = new List<Blog>();
-            Blogs.Add(new Blog() { UrlToBlog = "xxx" });
-            Blogs.Add(new Blog() { UrlToBlog = "xxx1" });
+            Blogs.Add(new Blog() { UrlToBlog = "http://pawel.sawicz.eu/feed/" });
+            Blogs.Add(new Blog() { UrlToBlog = "http://mfranc.com/feed" });
         }
     }
 }

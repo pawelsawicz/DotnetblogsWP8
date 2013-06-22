@@ -1,22 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Data;
-using System.Globalization;
-using System.Text.RegularExpressions;
-using RestSharp.Contrib;
-namespace Dotnetblogs.Repositorium.Blogs
+
+namespace Dotnetblogs.Class
 {
     public class Blog : IValueConverter
     {
-        public string UrlToBlog { get; set; }
-
-        public Blog(string urlToBlog)
-        {
-            UrlToBlog = urlToBlog;
-        }
+        public string UrlToBlog { get; set; }        
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

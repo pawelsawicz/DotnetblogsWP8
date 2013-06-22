@@ -8,6 +8,7 @@
     <!--Application Resources-->
     <Application.Resources>
         <local:LocalizedStrings xmlns:local="clr-namespace:Dotnetblogs" x:Key="LocalizedStrings"/>
+        <converter:Blog xmlns:converter="clr-namespace:Dotnetblogs.Class" x:Key="Blog" />
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>
