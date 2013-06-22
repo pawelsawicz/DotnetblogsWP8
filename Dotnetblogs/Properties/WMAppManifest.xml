@@ -18,24 +18,27 @@
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="DotnetblogsToken" TaskName="_default">
-        <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">
-          </SmallImageURI>
+        <TemplateIconic>
+          <SmallImageURI IsRelative="true" IsResource="false">small_icon.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">
-          </BackgroundImageURI>
+          <IconImageURI IsRelative="true" IsResource="false">
+          </IconImageURI>
           <Title>
           </Title>
-          <BackContent>
-          </BackContent>
-          <BackBackgroundImageURI IsRelative="true" IsResource="false">
-          </BackBackgroundImageURI>
-          <BackTitle>
-          </BackTitle>
+          <Message>
+          </Message>
+          <BackgroundColor>
+          </BackgroundColor>
+          <HasLarge>false</HasLarge>
+          <LargeContent1>
+          </LargeContent1>
+          <LargeContent2>
+          </LargeContent2>
+          <LargeContent3>
+          </LargeContent3>
           <DeviceLockImageURI IsRelative="true" IsResource="false">
           </DeviceLockImageURI>
-          <HasLarge>false</HasLarge>
-        </TemplateFlip>
+        </TemplateIconic>
       </PrimaryToken>
     </Tokens>
     <ScreenResolutions>

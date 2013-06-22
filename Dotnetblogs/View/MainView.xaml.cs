@@ -24,7 +24,20 @@ namespace Dotnetblogs.View
 
         private void feedListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            ListBox listBox = sender as ListBox;
 
+            if (listBox != null && listBox.SelectedItem != null)
+            {                
+                SyndicationItem sItem = (SyndicationItem)listBox.SelectedItem;              
+                if (sItem.Links.Count > 0)
+                {
+                    
+                    Uri uri = sItem.Links.FirstOrDefault().Uri;                    
+                    WebBrowserTask webBrowserTask = new WebBrowserTask();
+                    webBrowserTask.Uri = uri;
+                    webBrowserTask.Show();
+                }
+            }
         }
 
         private void loadFeed()
@@ -49,6 +62,34 @@ namespace Dotnetblogs.View
 
                 UpdateFeedList(e.Result);
             }
+        }
+
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+           
+            if (this.State.ContainsKey("feed"))
+            {               
+                if (feedListBox.Items.Count == 0)
+                {
+                    UpdateFeedList(State["feed"] as string);
+                }
+            }
+        }
+
+        private void UpdateFeedList(string feedXML)
+        {
+           
+            StringReader stringReader = new StringReader(feedXML);
+            XmlReader xmlReader = XmlReader.Create(stringReader);
+            SyndicationFeed feed = SyndicationFeed.Load(xmlReader);
+
+            
+            Deployment.Current.Dispatcher.BeginInvoke(() =>
+            {
+             
+                feedListBox.ItemsSource = feed.Items;
+
+            });
         }
     }
 }
