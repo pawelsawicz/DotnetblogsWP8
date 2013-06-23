@@ -88,6 +88,7 @@ namespace Dotnetblogs.View
             {
              
                 feedListBox.ItemsSource = feed.Items;
+                feedBlogListBox.ItemsSource = feed.Items;
 
             });
         }

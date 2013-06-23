@@ -4,11 +4,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+  
 
     <!--Application Resources-->
     <Application.Resources>
         <local:LocalizedStrings xmlns:local="clr-namespace:Dotnetblogs" x:Key="LocalizedStrings"/>
         <converter:Blog xmlns:converter="clr-namespace:Dotnetblogs.Class" x:Key="Blog" />
+        <Style x:Key="LayoutRootStyle" TargetType="Panel">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="/Assets/Images/background.png" Stretch="UniformToFill" />                    
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>
@@ -16,6 +25,7 @@
         <shell:PhoneApplicationService
             Launching="Application_Launching" Closing="Application_Closing"
             Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+        
     </Application.ApplicationLifetimeObjects>
 
 </Application>

@@ -14,31 +14,42 @@
     shell:SystemTray.IsVisible="False">
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
-    <Grid x:Name="LayoutRoot">
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootStyle}">
+        
         <phone:Panorama Title=".NET Blogs PL">
 
-            <!--Panorama item one-->
-            <phone:PanoramaItem Header="Lasted News">
-                <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,12,0">
-                    <ListBox Name="feedListBox" Height="468" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="400" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="feedListBox_SelectionChanged">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel VerticalAlignment="Top">
-                                    <TextBlock TextDecorations="Underline" FontSize="24" Name="feedTitle" TextWrapping="Wrap" Margin="12,0,0,0" HorizontalAlignment="Left" Foreground="{StaticResource PhoneAccentBrush}" Text="{Binding Title.Text, Converter={StaticResource Blog}}" />
-                                    <TextBlock Name="feedSummary" TextWrapping="Wrap" Margin="12,0,0,0" Text="{Binding Summary.Text, Converter={StaticResource Blog}}" />
-                                    <TextBlock Name="feedPubDate" Foreground="{StaticResource PhoneSubtleBrush}" Margin="12,0,0,10" Text="{Binding PublishDate.DateTime}" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </Grid>
-            </phone:PanoramaItem>
+                <!--Panorama item one-->
+                <phone:PanoramaItem Header="Latest News">
+                    <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,12,0">
+                        <ListBox Name="feedListBox" Height="470" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top" Width="400" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="feedListBox_SelectionChanged">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel VerticalAlignment="Top">
+                                        <TextBlock TextDecorations="Underline" FontSize="24" Name="feedTitle" TextWrapping="Wrap" Margin="12,0,0,0" HorizontalAlignment="Left" Foreground="{StaticResource PhoneAccentBrush}" Text="{Binding Title.Text, Converter={StaticResource Blog}}" />
+                                        <TextBlock Name="feedSummary" TextWrapping="Wrap" Margin="12,0,0,0" Text="{Binding Summary.Text, Converter={StaticResource Blog}}" />
+                                        <TextBlock Name="feedPubDate" Foreground="{StaticResource PhoneSubtleBrush}" Margin="12,0,0,10" Text="{Binding PublishDate.DateTime}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </phone:PanoramaItem>
 
-            <!--Panorama item two-->
-            <phone:PanoramaItem Header="Blogs">
-                <Grid/>
-            </phone:PanoramaItem>
-        </phone:Panorama>
+                <!--Panorama item two-->
+                <phone:PanoramaItem Header="Blogs">
+                    <Grid x:Name="ContentPanelBlog" Grid.Row="1" Margin="0,0,12,0">
+                        <ListBox Name="feedBlogListBox" Height="470" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top" Width="400" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel VerticalAlignment="Top">
+                                        <TextBlock FontSize="24" Name="blogTitle" TextWrapping="Wrap" Margin="12,0,0,0" HorizontalAlignment="Left" Foreground="{StaticResource PhoneAccentBrush}" Text="{Binding Title.Text, Converter={StaticResource Blog}}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </phone:PanoramaItem>
+            </phone:Panorama>        
     </Grid>
 
 </phone:PhoneApplicationPage>
