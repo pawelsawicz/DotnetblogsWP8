@@ -73,7 +73,10 @@ namespace Dotnetblogs.View
                 {
                     UpdateFeedList(State["feed"] as string);
                 }
+
+                
             }
+            
         }
 
         private void UpdateFeedList(string feedXML)
@@ -91,6 +94,11 @@ namespace Dotnetblogs.View
                 feedBlogListBox.ItemsSource = feed.Items;
 
             });
+        }
+
+        protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Current.Terminate();
         }
     }
 }
