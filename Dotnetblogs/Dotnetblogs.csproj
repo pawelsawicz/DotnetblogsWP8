@@ -158,9 +158,9 @@
     <Content Include="Assets\Tiles\large_icon.png" />
     <Content Include="Assets\Tiles\medium_icon.png" />
     <Content Include="Assets\Tiles\small_icon.png" />
-    <Content Include="large_icon.png" />
-    <Content Include="medium_icon.png" />
-    <Content Include="small_icon.png" />
+    <Content Include="Assets\Images\large_icon.png" />
+    <Content Include="Assets\Images\medium_icon.png" />
+    <Content Include="Assets\Images\small_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.pl-PL.resx" />
